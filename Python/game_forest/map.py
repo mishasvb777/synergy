@@ -3,10 +3,6 @@ from utils import randcell
 from utils import randcell2
 import os
 
-# 0 - поле 
-# 1 - дерево
-# 2 - река 
-
 CELL_TYPES = "🔲🌲🌊🏥🏠🔥🧊"
 TREE_BONUS = 100
 UPGRADE_COST = 5000
