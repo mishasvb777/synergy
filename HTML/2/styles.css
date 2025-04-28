@@ -1,0 +1,22 @@
+body {
+  -webkit-background-color: #f0f8ff;
+  -moz-background-color: #f0f8ff;
+  -ms-background-color: #f0f8ff;
+  -o-background-color: #f0f8ff;
+  background-color: #f0f8ff;
+  color: #00008b;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: underline;
+}
+
+img {
+  width: 300px;
+}
