@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Дней до Нового Года</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        text-align: center;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      }
+
+      input[type='text'] {
+        padding: 10px;
+        width: 200px;
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .result {
+        margin-top: 20px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input
+        type="text"
+        id="dateInput"
+        placeholder="Введите дату (дд.мм.гггг)"
+      />
+      <br />
+      <button onclick="processDate()">Рассчитать</button>
+
+      <div class="result" id="daysResult"></div>
+      <div class="result" id="leapResult"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
