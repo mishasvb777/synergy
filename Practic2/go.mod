@@ -1,0 +1,3 @@
+module practic
+
+go 1.25.6
