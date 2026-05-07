@@ -35,4 +35,4 @@ go test ./...
 ```
 
 ## Ссылка на GitHub-репозиторий
-`https://github.com/mishasvb777/synergy/edit/main/Practic2)`
+`https://github.com/mishasvb777/synergy/edit/main/Practic2`
