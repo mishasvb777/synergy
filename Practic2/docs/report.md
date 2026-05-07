@@ -57,4 +57,4 @@
 
 ## 6. Ссылка на репозиторий GitHub
 
-`TODO: добавить ссылку после публикации репозитория`
+`https://github.com/mishasvb777/synergy/edit/main/Practic2`
