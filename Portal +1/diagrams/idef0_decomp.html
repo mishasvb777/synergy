@@ -1,0 +1,74 @@
+<!doctype html><html><head><meta charset="utf-8"/><style>
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap');
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 28px 36px 20px;
+  background: #F3F6F4;
+  font-family: Manrope, "Segoe UI", sans-serif;
+  color: #1C2422;
+}
+.kicker { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #2D8C7A; font-weight: 700; margin: 0 0 6px; }
+h1 { font-size: 22px; font-weight: 800; letter-spacing: -0.03em; margin: 0 0 22px; }
+.canvas { position: relative; width: 1120px; height: 560px; margin: 0 auto; }
+.box {
+  position: absolute;
+  border: 1.5px solid #2D8C7A;
+  background: #fff;
+  border-radius: 16px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; font-weight: 700; font-size: 15px; padding: 12px 14px; line-height: 1.3;
+  box-shadow: 0 8px 24px rgba(28,36,34,0.06);
+}
+.box .code { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; color: #2D8C7A; margin-bottom: 6px; }
+.lbl { position: absolute; font-size: 13px; color: #6F7A76; font-weight: 600; line-height: 1.35; max-width: 180px; }
+.axis {
+  position: absolute; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: #A3ADA9; font-weight: 700;
+}
+.line-h { position: absolute; height: 1.5px; background: #C5D2CC; }
+.line-v { position: absolute; width: 1.5px; background: #C5D2CC; }
+.tip-r { position: absolute; width: 0; height: 0; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 8px solid #C5D2CC; }
+.tip-d { position: absolute; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 8px solid #C5D2CC; }
+.tip-u { position: absolute; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 8px solid #C5D2CC; }
+
+.canvas { height: 520px; }
+.box { font-size: 13px; }
+h1,.kicker{display:none}
+</style></head><body>
+<div class="canvas">
+  <div class="box" style="left:20px;top:190px;width:230px;height:118px;">
+    <div class="code">A1</div>Аутентифицировать<br>пользователя
+  </div>
+  <div class="box" style="left:300px;top:190px;width:230px;height:118px;">
+    <div class="code">A2</div>Публиковать<br>и доставлять новости
+  </div>
+  <div class="box" style="left:580px;top:190px;width:230px;height:118px;">
+    <div class="code">A3</div>Обеспечить<br>обратную связь
+  </div>
+  <div class="box" style="left:860px;top:190px;width:240px;height:118px;">
+    <div class="code">A4</div>Сервисы<br>и администрирование
+  </div>
+
+  <div class="line-h" style="left:250px;top:246px;width:50px;"></div>
+  <div class="tip-r" style="left:294px;top:240px;"></div>
+  <div class="line-h" style="left:530px;top:246px;width:50px;"></div>
+  <div class="tip-r" style="left:574px;top:240px;"></div>
+  <div class="line-h" style="left:810px;top:246px;width:50px;"></div>
+  <div class="tip-r" style="left:854px;top:240px;"></div>
+
+  <div class="lbl" style="left:36px;top:90px;">учётные данные</div>
+  <div class="lbl" style="left:316px;top:78px;">черновики<br>регламент модерации</div>
+  <div class="lbl" style="left:596px;top:90px;">комментарии · реакции</div>
+  <div class="lbl" style="left:876px;top:78px;">роли · заявки<br>меню операций</div>
+
+  <div class="lbl" style="left:36px;top:330px;">сессия JWT</div>
+  <div class="lbl" style="left:316px;top:330px;">лента · карточка</div>
+  <div class="lbl" style="left:596px;top:330px;">обсуждение · лайки</div>
+  <div class="lbl" style="left:876px;top:330px;">HR / IT · роли</div>
+
+  <div class="lbl" style="left:280px;top:430px;max-width:560px;text-align:center;width:560px;">
+    управление: матрица ролей user / moderator / admin<br>
+    механизм: React SPA · Node.js API · PostgreSQL · Redis
+  </div>
+</div>
+</body></html>

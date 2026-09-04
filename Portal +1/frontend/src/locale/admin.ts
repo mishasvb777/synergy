@@ -1,0 +1,22 @@
+export const admin = {
+  title: 'Пользователи',
+  subtitle: 'Учётные записи и роли',
+  newUser: 'Новый пользователь',
+  loginLabel: 'Логин',
+  passwordLabel: 'Пароль',
+  fullNameLabel: 'ФИО',
+  roleLabel: 'Роль',
+  create: 'Создать',
+  created: 'Пользователь создан',
+  columns: {
+    id: 'ID',
+    login: 'Логин',
+    fullName: 'ФИО',
+    role: 'Роль',
+    status: 'Статус',
+  },
+  active: 'активен',
+  inactive: 'отключён',
+  disable: 'Отключить',
+  enable: 'Включить',
+} as const;

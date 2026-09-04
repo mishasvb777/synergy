@@ -1,0 +1,23 @@
+export const newsManage = {
+  title: 'Новости',
+  subtitle: 'Создание и редактирование публикаций',
+  newPublication: 'Новая публикация',
+  editPublication: (id: number) => `Редактирование #${id}`,
+  titleLabel: 'Заголовок',
+  bodyLabel: 'Текст',
+  published: 'Опубликовано',
+  create: 'Создать',
+  save: 'Сохранить',
+  cancel: 'Отмена',
+  edit: 'Изменить',
+  created: 'Новость создана',
+  updated: 'Новость обновлена',
+  columns: {
+    id: 'ID',
+    title: 'Заголовок',
+    author: 'Автор',
+    status: 'Статус',
+  },
+  statusPublished: 'опубликовано',
+  statusDraft: 'черновик',
+} as const;

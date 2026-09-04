@@ -1,0 +1,78 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8"/>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'neutral',
+    securityLevel: 'loose',
+    flowchart: { htmlLabels: true, curve: 'basis', nodeSpacing: 40, rankSpacing: 50 },
+  });
+</script>
+<style>
+  body { margin: 0; padding: 24px; background: #fff; font-family: Segoe UI, sans-serif; }
+  .box { display: inline-block; min-width: 900px; }
+</style>
+</head>
+<body><div class="box"><pre class="mermaid">erDiagram
+  ROLES ||--o{ USERS : has
+  USERS ||--o{ NEWS : authors
+  USERS ||--o{ COMMENTS : writes
+  USERS ||--o{ REACTIONS : leaves
+  USERS ||--o{ ACTIVITY_POSTS : authors
+  NEWS ||--o{ COMMENTS : has
+  NEWS ||--o{ REACTIONS : has
+  ROLES {
+    int id
+    string code
+    string name
+  }
+  USERS {
+    int id
+    string login
+    string email
+    bool email_verified
+    string full_name
+    int role_id
+  }
+  NEWS {
+    int id
+    string title
+    text body
+    int author_id
+    bool is_published
+  }
+  COMMENTS {
+    int id
+    int news_id
+    int author_id
+    text body
+  }
+  REACTIONS {
+    int id
+    int news_id
+    int user_id
+    string reaction_type
+  }
+  ACTIVITY_POSTS {
+    int id
+    string title
+    text body
+    string post_type
+    int community_id
+    text image_data
+    int author_id
+  }
+  MENU_ITEMS {
+    int id
+    string code
+    string path
+    string min_role
+  }
+  EMAIL_OUTBOX {
+    int id
+    string recipient
+    string subject
+    text body
+  }</pre></div></body></html>

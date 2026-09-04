@@ -1,0 +1,60 @@
+<!doctype html><html><head><meta charset="utf-8"/><style>
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap');
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 28px 36px 20px;
+  background: #F3F6F4;
+  font-family: Manrope, "Segoe UI", sans-serif;
+  color: #1C2422;
+}
+.kicker { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #2D8C7A; font-weight: 700; margin: 0 0 6px; }
+h1 { font-size: 22px; font-weight: 800; letter-spacing: -0.03em; margin: 0 0 22px; }
+.canvas { position: relative; width: 1120px; height: 560px; margin: 0 auto; }
+.box {
+  position: absolute;
+  border: 1.5px solid #2D8C7A;
+  background: #fff;
+  border-radius: 16px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; font-weight: 700; font-size: 15px; padding: 12px 14px; line-height: 1.3;
+  box-shadow: 0 8px 24px rgba(28,36,34,0.06);
+}
+.box .code { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; color: #2D8C7A; margin-bottom: 6px; }
+.lbl { position: absolute; font-size: 13px; color: #6F7A76; font-weight: 600; line-height: 1.35; max-width: 180px; }
+.axis {
+  position: absolute; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: #A3ADA9; font-weight: 700;
+}
+.line-h { position: absolute; height: 1.5px; background: #C5D2CC; }
+.line-v { position: absolute; width: 1.5px; background: #C5D2CC; }
+.tip-r { position: absolute; width: 0; height: 0; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 8px solid #C5D2CC; }
+.tip-d { position: absolute; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 8px solid #C5D2CC; }
+.tip-u { position: absolute; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 8px solid #C5D2CC; }
+ h1,.kicker{display:none}</style></head><body>
+<div class="canvas">
+  <div class="axis" style="left:500px;top:8px;">управление</div>
+  <div class="line-v" style="left:559px;top:28px;height:148px;"></div>
+  <div class="tip-d" style="left:553px;top:170px;"></div>
+  <div class="lbl" style="left:575px;top:48px;">Регламенты ИБ<br>роли · политика публикаций</div>
+
+  <div class="axis" style="left:24px;top:214px;">вход</div>
+  <div class="line-h" style="left:70px;top:248px;width:268px;"></div>
+  <div class="tip-r" style="left:332px;top:242px;"></div>
+  <div class="lbl" style="left:70px;top:262px;">запросы · контент<br>учётные данные</div>
+
+  <div class="box" style="left:350px;top:186px;width:420px;height:140px;">
+    <div class="code">A0</div>
+    Обеспечить информирование<br>и доступ к сервисам портала
+  </div>
+
+  <div class="axis" style="left:980px;top:214px;">выход</div>
+  <div class="line-h" style="left:770px;top:248px;width:250px;"></div>
+  <div class="tip-r" style="left:1018px;top:242px;"></div>
+  <div class="lbl" style="left:790px;top:262px;">лента · обратная связь<br>доступ к операциям</div>
+
+  <div class="axis" style="left:500px;top:520px;">механизм</div>
+  <div class="line-v" style="left:559px;top:326px;height:150px;"></div>
+  <div class="tip-u" style="left:553px;top:318px;"></div>
+  <div class="lbl" style="left:575px;top:400px;">сотрудник / модератор / admin<br>«Портал+1»</div>
+</div>
+</body></html>

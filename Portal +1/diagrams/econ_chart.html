@@ -1,0 +1,67 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  body { margin: 0; padding: 24px; background: #fff; font-family: "Times New Roman", serif; }
+  h1 { font-size: 18px; text-align: center; margin: 0 0 8px; font-weight: 700; }
+  .sub { text-align: center; font-size: 13px; color: #333; margin-bottom: 16px; }
+  .wrap { width: 920px; margin: 0 auto; }
+  canvas { background: #fff; }
+</style></head>
+<body>
+  <div class="wrap" id="box">
+    <h1>Сравнение базового и предлагаемого вариантов</h1>
+    <div class="sub">Показатели экономической эффективности проекта «Портал+1» (учебный расчёт)</div>
+    <canvas id="c1" height="220"></canvas>
+    <canvas id="c2" height="200" style="margin-top:20px"></canvas>
+  </div>
+  <script>
+    const laborAsIs = 7480000;
+    const laborToBe = 2493333;
+    const saveRubYear = 4986667;
+    const costYear1 = 996000;
+    const annualEffect = 4566667;
+    const costDev = 576000;
+    const fmt = (v) => (v/1000).toFixed(0);
+
+    new Chart(document.getElementById('c1'), {
+      type: 'bar',
+      data: {
+        labels: ['Стоимость трудозатрат аудитории, тыс. руб./год'],
+        datasets: [
+          { label: 'Базовый («как есть»)', data: [laborAsIs/1000], backgroundColor: '#9e9e9e' },
+          { label: 'Предлагаемый («Портал+1»)', data: [laborToBe/1000], backgroundColor: '#2d8c7a' },
+        ]
+      },
+      options: {
+        responsive: false,
+        animation: false,
+        plugins: { legend: { position: 'bottom' } },
+        scales: { y: { beginAtZero: true, title: { display: true, text: 'тыс. руб.' } } }
+      }
+    });
+
+    new Chart(document.getElementById('c2'), {
+      type: 'bar',
+      data: {
+        labels: [
+          'Годовая экономия',
+          'Затраты 1-го года',
+          'Чистый годовой эффект',
+          'Затраты на разработку'
+        ],
+        datasets: [{
+          label: 'тыс. руб.',
+          data: [saveRubYear/1000, costYear1/1000, annualEffect/1000, costDev/1000],
+          backgroundColor: ['#2d8c7a', '#c75b39', '#3a7bd5', '#6b6b6b']
+        }]
+      },
+      options: {
+        responsive: false,
+        animation: false,
+        plugins: { legend: { display: false } },
+        scales: { y: { beginAtZero: true, title: { display: true, text: 'тыс. руб.' } } }
+      }
+    });
+  </script>
+</body></html>

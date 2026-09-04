@@ -1,0 +1,36 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8"/>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'neutral',
+    securityLevel: 'loose',
+    flowchart: { htmlLabels: true, curve: 'basis', nodeSpacing: 40, rankSpacing: 50 },
+  });
+</script>
+<style>
+  body { margin: 0; padding: 24px; background: #fff; font-family: Segoe UI, sans-serif; }
+  .box { display: inline-block; min-width: 900px; }
+</style>
+</head>
+<body><div class="box"><pre class="mermaid">flowchart TD
+  FE[React SPA pages] --> API[Express API]
+  API --> AuthM[auth]
+  API --> NewsM[news]
+  API --> CommM[comments]
+  API --> ReactM[reactions]
+  API --> ActM[activity]
+  API --> MenuM[menu]
+  API --> AdmM[admin]
+  AuthM --> MailS[mail service]
+  AuthM --> DB[(PostgreSQL/PGlite)]
+  NewsM --> DB
+  CommM --> DB
+  ReactM --> DB
+  ActM --> DB
+  MenuM --> DB
+  AdmM --> DB
+  MailS --> Outbox[(email_outbox)]
+  NewsM --> Cache[(Redis/Memory)]</pre></div></body></html>

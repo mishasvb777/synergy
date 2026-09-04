@@ -1,0 +1,23 @@
+export const appShell = {
+  brand: 'Портал+1',
+  company: 'Иннотех',
+  logout: 'Выход',
+  searchPlaceholder: 'Найти на портале',
+  support: 'Поддержка портала',
+  nav: {
+    news: 'Новости',
+    events: 'События',
+    activity: 'Активность',
+    knowledge: 'База знаний',
+    org: 'Оргструктура',
+    academy: 'Цифровая Академия',
+    communities: 'Сообщества',
+    benefits: 'Бенефиты',
+    services: 'Сервисы',
+    workspace: 'Мое рабочее пространство',
+    hr: 'Кадровые сервисы',
+    it: 'ИТ-поддержка',
+    newsManage: 'Управление новостями',
+    admin: 'Пользователи и роли',
+  },
+} as const;

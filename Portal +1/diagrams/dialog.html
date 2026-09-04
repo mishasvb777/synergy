@@ -1,0 +1,124 @@
+<!doctype html><html><head><meta charset="utf-8"/>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 28px 32px; background: #fff;
+    font-family: "Segoe UI", "Times New Roman", sans-serif;
+    color: #111;
+  }
+  h1 {
+    margin: 0 0 18px; font-size: 20px; font-weight: 700; text-align: center;
+  }
+  .root {
+    display: block; margin: 0 auto 16px; max-width: 220px;
+    padding: 12px 16px; text-align: center; font-weight: 700; font-size: 16px;
+    border: 2px solid #222; background: #f3f3f3; border-radius: 8px;
+  }
+  .branch {
+    border: 1.5px solid #333; border-radius: 10px; padding: 10px 12px 12px;
+    background: #fafafa; margin-bottom: 10px;
+  }
+  .branch h2 {
+    margin: 0 0 8px; font-size: 14px; font-weight: 700;
+    padding-bottom: 6px; border-bottom: 1px solid #ccc;
+  }
+  .leaves {
+    display: flex; flex-wrap: wrap; gap: 6px;
+  }
+  .leaf {
+    border: 1px solid #555; border-radius: 6px; padding: 6px 10px;
+    font-size: 13px; background: #fff; line-height: 1.25;
+  }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+  .note { margin-top: 10px; font-size: 12px; color: #444; text-align: center; }
+
+  .flow { display: flex; flex-direction: column; gap: 10px; max-width: 920px; margin: 0 auto; }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: stretch; justify-content: center; }
+  .box {
+    border: 1.5px solid #333; border-radius: 8px; padding: 8px 12px;
+    background: #fff; font-size: 13px; text-align: center; min-width: 120px;
+  }
+  .box.main { background: #e8f0ee; border-width: 2px; font-weight: 700; }
+  .box.start, .box.end { border-radius: 20px; background: #eee; font-weight: 650; }
+  .box.warn { background: #f7ecec; }
+  .arrow { text-align: center; font-size: 12px; color: #333; line-height: 1.35; }
+  .group {
+    border: 1.5px dashed #666; border-radius: 10px; padding: 10px;
+    background: #fcfcfc; width: 100%;
+  }
+  .group h2 { margin: 0 0 8px; font-size: 13px; font-weight: 700; text-align: center; }
+  .label { font-size: 11px; color: #444; margin: 0 4px; align-self: center; }
+</style></head><body>
+  <div class="flow">
+    <div class="row">
+      <div class="box start">Старт</div>
+    </div>
+    <div class="arrow">↓</div>
+    <div class="row">
+      <div class="box">Вход</div>
+      <span class="label">нет аккаунта →</span>
+      <div class="box">Регистрация</div>
+      <span class="label">→</span>
+      <div class="box">Confirm email</div>
+      <span class="label">→ вход</span>
+    </div>
+    <div class="arrow">ошибка ↺ &nbsp;&nbsp;|&nbsp;&nbsp; успех ↓</div>
+    <div class="row">
+      <div class="box main">Новости (главный экран)</div>
+    </div>
+    <div class="arrow">навигация по разделам портала ↓</div>
+
+    <div class="group">
+      <h2>Информирование и обратная связь</h2>
+      <div class="row">
+        <div class="box">Карточка новости</div>
+        <div class="box">Комментарии / реакции</div>
+        <div class="box">Поиск</div>
+      </div>
+    </div>
+
+    <div class="group">
+      <h2>Социальный контур</h2>
+      <div class="row">
+        <div class="box">События</div>
+        <div class="box">Активность</div>
+        <div class="box">Пост активности</div>
+        <div class="box">Сообщества</div>
+      </div>
+    </div>
+
+    <div class="group">
+      <h2>Справочники и обучение</h2>
+      <div class="row">
+        <div class="box">База знаний</div>
+        <div class="box">Оргструктура</div>
+        <div class="box">Цифровая Академия</div>
+        <div class="box">Бенефиты</div>
+      </div>
+    </div>
+
+    <div class="group">
+      <h2>Операционные сервисы</h2>
+      <div class="row">
+        <div class="box">Операции</div>
+        <div class="box">Кадровые сервисы</div>
+        <div class="box">ИТ-поддержка</div>
+        <div class="box">Поддержка портала</div>
+        <div class="box">Рабочее пространство</div>
+      </div>
+    </div>
+
+    <div class="group">
+      <h2>Модерация и администрирование</h2>
+      <div class="row">
+        <div class="box">Управление новостями</div>
+        <div class="box">Админка (пользователи)</div>
+        <div class="box warn">Forbidden (нет прав)</div>
+      </div>
+    </div>
+
+    <div class="arrow">↓ выход из системы</div>
+    <div class="row"><div class="box end">Выход → экран входа</div></div>
+  </div>
+</body></html>

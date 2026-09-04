@@ -1,0 +1,99 @@
+<!doctype html><html><head><meta charset="utf-8"/>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 28px 32px; background: #fff;
+    font-family: "Segoe UI", "Times New Roman", sans-serif;
+    color: #111;
+  }
+  h1 {
+    margin: 0 0 18px; font-size: 20px; font-weight: 700; text-align: center;
+  }
+  .root {
+    display: block; margin: 0 auto 16px; max-width: 220px;
+    padding: 12px 16px; text-align: center; font-weight: 700; font-size: 16px;
+    border: 2px solid #222; background: #f3f3f3; border-radius: 8px;
+  }
+  .branch {
+    border: 1.5px solid #333; border-radius: 10px; padding: 10px 12px 12px;
+    background: #fafafa; margin-bottom: 10px;
+  }
+  .branch h2 {
+    margin: 0 0 8px; font-size: 14px; font-weight: 700;
+    padding-bottom: 6px; border-bottom: 1px solid #ccc;
+  }
+  .leaves {
+    display: flex; flex-wrap: wrap; gap: 6px;
+  }
+  .leaf {
+    border: 1px solid #555; border-radius: 6px; padding: 6px 10px;
+    font-size: 13px; background: #fff; line-height: 1.25;
+  }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+  .note { margin-top: 10px; font-size: 12px; color: #444; text-align: center; }
+
+  .actors {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 14px;
+  }
+  .actor {
+    border: 2px solid #222; border-radius: 12px; padding: 12px; background: #f5f5f5;
+  }
+  .actor .who {
+    text-align: center; font-weight: 700; font-size: 15px; margin-bottom: 10px;
+  }
+  .actor .who::before {
+    content: "● "; color: #2d6a5a;
+  }
+  .uc {
+    display: block; border: 1px solid #444; border-radius: 16px; padding: 6px 10px;
+    margin: 5px 0; font-size: 12.5px; background: #fff; text-align: center;
+  }
+  .shared {
+    border: 1.5px dashed #555; border-radius: 10px; padding: 10px 12px; margin-top: 4px;
+    background: #fafafa;
+  }
+  .shared h2 { margin: 0 0 8px; font-size: 13px; text-align: center; }
+  .shared .row { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+  .shared .uc { margin: 0; min-width: 140px; }
+</style></head><body>
+  <div class="actors">
+    <div class="actor">
+      <div class="who">Сотрудник</div>
+      <span class="uc">Вход / регистрация</span>
+      <span class="uc">Новости и карточка</span>
+      <span class="uc">Комментарии, реакции</span>
+      <span class="uc">Активность и пост</span>
+      <span class="uc">События, сообщества</span>
+      <span class="uc">База знаний, оргструктура</span>
+      <span class="uc">Академия, бенефиты</span>
+      <span class="uc">Операции, HR, ИТ</span>
+      <span class="uc">Поддержка, workspace</span>
+      <span class="uc">Поиск</span>
+    </div>
+    <div class="actor">
+      <div class="who">Модератор</div>
+      <span class="uc">Вход</span>
+      <span class="uc">Новости (просмотр)</span>
+      <span class="uc">Активность</span>
+      <span class="uc">Управление новостями</span>
+      <span class="uc">Все сервисы сотрудника</span>
+    </div>
+    <div class="actor">
+      <div class="who">Администратор</div>
+      <span class="uc">Вход</span>
+      <span class="uc">Новости (просмотр)</span>
+      <span class="uc">Управление новостями</span>
+      <span class="uc">Пользователи и роли</span>
+      <span class="uc">Все сервисы сотрудника</span>
+    </div>
+  </div>
+  <div class="shared">
+    <h2>Общие сценарии контроля доступа</h2>
+    <div class="row">
+      <span class="uc">Подтверждение email</span>
+      <span class="uc">Отказ в доступе (Forbidden)</span>
+      <span class="uc">Выход из системы</span>
+    </div>
+  </div>
+</body></html>

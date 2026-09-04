@@ -1,0 +1,36 @@
+<!doctype html><html><head><meta charset="utf-8"/><style>
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap');
+body { margin:0; padding:36px 24px 24px; font-family: Manrope, "Segoe UI", sans-serif; background:#F3F6F4; color:#1C2422; }
+.kicker, h1 { display:none; }
+.tree { display:flex; flex-direction:column; align-items:center; gap:14px; }
+.n {
+  background:#fff; border:1.5px solid #E3EAE6; border-radius:16px;
+  padding:14px 22px; font-weight:750; text-align:center; min-width:200px;
+  box-shadow: 0 8px 24px rgba(28,36,34,0.05);
+}
+.n.accent { border-color:#2D8C7A; background:#E7F4F0; }
+.n small { display:block; font-weight:600; color:#6F7A76; font-size:12px; margin-top:4px; }
+.row { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+.sub {
+  background:#fff; border:1px solid #E3EAE6; border-radius:14px;
+  padding:12px 16px; min-width:160px; text-align:center; font-size:14px; font-weight:650;
+}
+.sub b { display:block; font-size:14px; margin-bottom:4px; }
+.sub span { display:block; color:#6F7A76; font-size:12px; font-weight:500; }
+.stem { width:1.5px; height:18px; background:#C5D2CC; }
+</style></head><body>
+<div class="tree">
+  <div class="n">Генеральный директор</div>
+  <div class="stem"></div>
+  <div class="row">
+    <div class="sub"><b>ИТ-блок</b><span>разработка · инфра · поддержка</span></div>
+    <div class="sub"><b>HR</b><span>кадры · обучение · бенефиты</span></div>
+    <div class="sub"><b>Операции</b><span>проекты · клиентский сервис</span></div>
+    <div class="sub"><b>Финансы</b><span>учёт · закупки</span></div>
+  </div>
+  <div class="stem"></div>
+  <div class="n accent">ИТ-отдел — заказчик портала
+    <small>роли MVP: сотрудник · модератор · администратор</small>
+  </div>
+</div>
+</body></html>
