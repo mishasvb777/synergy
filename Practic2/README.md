@@ -35,7 +35,4 @@ go test ./...
 ```
 
 ## Ссылка на GitHub-репозиторий
-
-После публикации замените строку ниже на актуальную ссылку:
-
-`TODO: https://github.com/<username>/<repository>`
+`https://github.com/mishasvb777/synergy/edit/main/Practic2`
